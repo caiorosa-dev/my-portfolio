@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import { Separator } from '../ui/separator';
+import { ThemeSwitcher } from '../theme-provider';
 
 export function Header() {
   return (
@@ -30,9 +31,7 @@ export function Header() {
             </Button>
           </a>
           <Separator orientation='vertical' className='h-6' />
-          <Button variant='ghost' size='icon'>
-            <MoonIcon className='size-6' />
-          </Button>
+          <ThemeSwitcher />
           <Button variant='ghost'>
             <Globe className='size-6' />
             English

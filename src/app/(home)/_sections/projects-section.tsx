@@ -47,7 +47,7 @@ export function ProjectsSection() {
                 <ul className='flex gap-2'>
                   {project.technologies.map((technology) => (
                     <li key={technology.label} className='p-2 rounded-full flex items-center justify-center' style={{ backgroundColor: `${technology.color}26` }}>
-                      <Image src={technology.icon} alt={technology.label} className={cn(technology.invertIconColor && 'invert size-4')} width={16} height={16} />
+                      <Image src={technology.icon} alt={technology.label} className={cn(technology.invertIconColor && 'dark:invert size-4')} width={16} height={16} />
                     </li>
                   ))}
                 </ul>

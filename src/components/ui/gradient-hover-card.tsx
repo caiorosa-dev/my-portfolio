@@ -46,7 +46,7 @@ export function GradientHoverCard({
     <article ref={articleRef} onMouseMove={(e) => handleMouseMove(e)} className='group'>
       <div
         ref={transformDivRef}
-        className={`pointer-events-none absolute rounded-full bg-primary/30 opacity-0 blur-[80px] transition-opacity duration-300 group-hover:opacity-100 ${gradientVariants(
+        className={`pointer-events-none absolute rounded-full dark:bg-primary/30 bg-blue-500/30 opacity-0 blur-[80px] transition-opacity duration-300 group-hover:opacity-100 ${gradientVariants(
           { size },
         )}`}
       ></div>

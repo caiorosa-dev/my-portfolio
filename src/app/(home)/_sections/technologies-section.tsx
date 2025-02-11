@@ -23,7 +23,7 @@ export function TechnologiesSection() {
                 {group.items.map((item) => (
                   <GradientHoverCard key={item.label} className='p-3 flex items-center gap-2'>
                     <figure className={cn('p-2 rounded-md')} style={{ backgroundColor: `${item.color}26` }}>
-                      <Image src={item.icon} alt={item.label} width={20} height={20} className={cn('size-5', { 'invert': item.invertIconColor })} />
+                      <Image src={item.icon} alt={item.label} width={20} height={20} className={cn('size-5', { 'dark:invert': item.invertIconColor })} />
                     </figure>
                     <p className='text-sm font-medium'>{item.label}</p>
                   </GradientHoverCard>

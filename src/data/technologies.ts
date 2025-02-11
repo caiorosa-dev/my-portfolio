@@ -53,6 +53,7 @@ export const TECHNOLOGIES_LIST: Record<string, Technology[]> = {
       label: 'Prisma.js',
       icon: '/logos/prisma-icon.svg',
       color: '#a7a7a7',
+      invertIconColor: true,
     }
   ],
   frontend: [
