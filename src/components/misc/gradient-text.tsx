@@ -2,12 +2,12 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const gradientTextVariants = cva(
-  "text-transparent bg-clip-text",
+  "bg-clip-text text-transparent",
   {
     variants: {
       variant: {
-        slate: "bg-gradient-to-t from-slate-400 via-white to-white",
-        colored: "bg-gradient-to-t via-60% from-indigo-500 via-pink-500 to-orange-500",
+        slate: "bg-gradient-to-t from-muted-foreground via-primary to-primary",
+        colored: "bg-gradient-to-t from-indigo-500 via-pink-500 via-60% to-orange-500",
       },
       direction: {
         left: "bg-gradient-to-l",

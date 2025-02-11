@@ -2,35 +2,39 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { GradientText } from '@/components/misc/gradient-text';
-import { Download } from 'lucide-react';
+import { SquareArrowOutUpRightIcon } from 'lucide-react';
+import { Title } from '@/components/ui/title';
+import { Container } from '@/components/layout/container';
 
 export function HeroSection() {
   return (
-    <section className='relative min-h-screen flex h-full items-center'>
-      <div className='max-w-7xl mx-auto flex justify-center items-center h-full flex-col gap-6 sm:px-6 lg:px-8'>
-        <div className='flex gap-2 items-center p-2 bg-background/10 backdrop-blur-sm rounded-full border border-border/70 px-8'>
+    <section className='relative flex h-full min-h-screen items-center'>
+      <Container className='flex flex-col items-center justify-center gap-6'>
+        <div className='flex items-center gap-2 rounded-full border border-border/70 bg-background/10 max-sm:p-1 max-sm:px-4 p-2 px-8 backdrop-blur-sm animate-fade-up animate-delay-100'>
           <Image src='https://avatars.githubusercontent.com/caiorosa-dev' alt='Caio Rosa' width={28} height={28} className='rounded-full' />
-          <span className='font-medium text-lg text-primary'>Caio Rosa</span>
+          <span className='text-lg font-medium text-primary max-sm:text-base'>Caio Rosa</span>
         </div>
-        <h1 className='text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-center'>
+        <Title className='animate-fade-up animate-delay-300'>
           <GradientText>Full Stack Developer</GradientText>
           <br />
           <GradientText>Crafting Efficient Solutions</GradientText>
-        </h1>
-        <p className='max-w-2xl mx-auto text-lg sm:text-xl text-slate-400/90 text-center'>With over 4 years of experience, I specialize in building innovative solutions using modern technologies like ReactJS, NextJS, and NodeJS.</p>
-        <div className='flex gap-4 relative mt-6'>
-          <span className='absolute z-0 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[100px] h-[50px] bg-primary/70 blur-[90px]' />
+        </Title>
+        <p className='mx-auto max-w-2xl text-center text-lg text-muted-foreground sm:text-xl animate-fade-up animate-delay-500'>
+          With over 4 years of experience, I specialize in building innovative solutions using modern technologies like ReactJS, NextJS, and NodeJS.
+        </p>
+        <div className='relative mt-6 flex gap-4 animate-fade-up animate-delay-700'>
+          <span className='absolute left-1/2 top-1/2 z-0 h-[50px] w-[100px] -translate-x-1/2 -translate-y-1/2 bg-primary/70 blur-[90px]' />
           <Link href='/' className='z-10'>
-            <Button>
+            <Button size='lg'>
               Get My Resume
-              <Download className='w-4 h-4' />
+              <SquareArrowOutUpRightIcon className='size-4' />
             </Button>
           </Link>
-          <Button variant='outline' className='z-10'>
+          <Button variant='outline' size='lg' className='z-10'>
             <Link href='/'>View my projects</Link>
           </Button>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

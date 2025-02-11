@@ -10,10 +10,8 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("@rocketseat/eslint-config/next", "next/core-web-vitals", "next/typescript", "plugin:tailwindcss/recommended"),
-  {
-    plugins: ["simple-import-sort"]
-  },
+  ...compat.extends("next/core-web-vitals", "next/typescript", "plugin:tailwindcss/recommended"),
+  "plugin:simple-import-sort/recommended",
 ];
 
 export default eslintConfig;

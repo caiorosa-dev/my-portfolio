@@ -1,38 +1,46 @@
-import { Github, Globe, Linkedin } from 'lucide-react';
+import { Github, Globe, Linkedin, Menu, MoonIcon } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui/button';
+import { Separator } from '../ui/separator';
 
 export function Header() {
   return (
-    <header className='fixed top-0 left-0 z-50 p-4 w-full'>
-      <section className='bg-background/20 backdrop-blur-sm rounded-xl w-full max-w-7xl mx-auto border border-border/70 py-3 px-8 flex justify-between items-center'>
+    <header className='fixed left-0 top-0 z-50 w-full p-4'>
+      <section className='mx-auto flex w-full max-w-7xl items-center justify-between rounded-xl border border-border/70 bg-background/20 px-8 max-sm:px-4 py-3 backdrop-blur-md'>
         <div className='flex items-center gap-6'>
-          <div className='flex items-center gap-1 pointer-events-none'>
+          <div className='pointer-events-none flex items-center gap-1'>
             <Image src='/logo-icon.png' alt='CR' width={36} height={36} />
-            <p className='text-primary font-bold text-xl'>dev</p>
+            <p className='text-xl font-bold text-primary'>dev</p>
           </div>
-          <nav className='flex gap-3'>
-            <Link href='/' className='font-semibold hover:text-primary/80 text-primary transition-all'>Home</Link>
-            <Link href='/projects' className='font-semibold hover:text-primary/80 text-primary transition-all'>Projects</Link>
+          <nav className='flex gap-3 max-sm:hidden'>
+            <Link href='/' className='font-semibold text-primary transition-all hover:text-primary/80'>Home</Link>
+            <Link href='/projects' className='font-semibold text-primary transition-all hover:text-primary/80'>Projects</Link>
           </nav>
         </div>
-        <nav className='flex gap-2'>
+        <nav className='flex items-center gap-2 max-sm:hidden'>
           <a href='https://github.com/caiorosa-dev' target='_blank' rel='noopener noreferrer'>
             <Button variant='ghost' size='icon'>
-              <Github className='w-6 h-6' />
+              <Github className='size-6' />
             </Button>
           </a>
           <a href='https://linkedin.com/in/caiorosa-dev' target='_blank' rel='noopener noreferrer'>
             <Button variant='ghost' size='icon'>
-              <Linkedin className='w-6 h-6' />
+              <Linkedin className='size-6' />
             </Button>
           </a>
+          <Separator orientation='vertical' className='h-6' />
+          <Button variant='ghost' size='icon'>
+            <MoonIcon className='size-6' />
+          </Button>
           <Button variant='ghost'>
-            <Globe className='w-6 h-6' />
+            <Globe className='size-6' />
             English
           </Button>
         </nav>
+        <Button variant='outline' size='icon' className='sm:hidden'>
+          <Menu className='size-6' />
+        </Button>
       </section>
     </header>
   )
