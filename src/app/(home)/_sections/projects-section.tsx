@@ -19,14 +19,14 @@ export function ProjectsSection() {
             My latest projects
           </GradientText>
         </Title>
-        <div className='grid grid-cols-2 gap-8'>
+        <div className='grid grid-cols-2 gap-8 max-sm:grid-cols-1'>
           {PROJECTS.map((project) => (
             <GradientHoverCard key={project.id} size='lg' className='rounded-xl p-4 space-y-6 bg-secondary/5'>
               <Image src={project.image} alt={project.title} className='w-full h-full object-cover aspect-video rounded-xl' width={1920} height={1080} />
               <section className='space-y-2'>
-                <header className='flex justify-between items-center'>
-                  <div className='flex items-center gap-2'>
-                    <h2 className='text-lg font-bold'>{project.title}</h2>
+                <header className='flex justify-between items-center max-sm:flex-wrap'>
+                  <div className='flex items-center gap-2 max-sm:gap-1'>
+                    <h2 className='text-lg max-sm:text-base font-bold'>{project.title}</h2>
                     {project.visitUrl && (
                       <a href={project.visitUrl} target='_blank'>
                         <Button variant='ghost' size='icon'>
@@ -35,15 +35,15 @@ export function ProjectsSection() {
                       </a>
                     )}
                   </div>
-                  <div className='flex gap-2'>
+                  <div className='flex gap-2 max-sm:gap-1'>
                     {project.tags.map((tag) => (
                       <Badge key={tag} variant='secondary'>{tag}</Badge>
                     ))}
                   </div>
                 </header>
-                <p className='text-muted-foreground'>{project.description}</p>
+                <p className='text-muted-foreground max-sm:text-sm'>{project.description}</p>
               </section>
-              <footer className='flex justify-between items-center'>
+              <footer className='flex justify-between items-center max-sm:flex-col max-sm:gap-2 max-sm:items-start'>
                 <ul className='flex gap-2'>
                   {project.technologies.map((technology) => (
                     <li key={technology.label} className='p-2 rounded-full flex items-center justify-center' style={{ backgroundColor: `${technology.color}26` }}>
@@ -51,7 +51,7 @@ export function ProjectsSection() {
                     </li>
                   ))}
                 </ul>
-                <nav className='flex gap-2 items-center'>
+                <nav className='flex gap-2 items-center max-sm:w-full'>
                   {project.githubUrl && (
                     <a href={project.githubUrl} target='_blank'>
                       <Button variant='secondary' size='icon'>
@@ -66,8 +66,8 @@ export function ProjectsSection() {
                       </Button>
                     </a>
                   )}
-                  <Link href={`/projects/${project.id}`} target='_blank'>
-                    <Button>
+                  <Link href={`/projects/${project.id}`} target='_blank' className='max-sm:w-full'>
+                    <Button className='max-sm:w-full'>
                       View More <ArrowRight className='w-4 h-4' />
                     </Button>
                   </Link>
