@@ -12,7 +12,10 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Caio Rosa",
-  description: "Caio Rosa's personal website",
+  description: "Caio Rosa's portfolio showcases his journey as a Full Stack Developer, highlighting his skills, latest projects, and the modern technologies he uses to build innovative and scalable solutions.",
+  openGraph: {
+    images: 'https://cdn.caiorosadev.com/og-image.png',
+  }
 };
 
 export default function RootLayout({
