@@ -22,7 +22,7 @@ export function HeroSection() {
         <p className='mx-auto max-w-2xl text-center text-lg text-muted-foreground sm:text-xl animate-fade-up animate-delay-500'>
           With over 4 years of experience, I specialize in building innovative solutions using modern technologies like ReactJS, NextJS, and NodeJS.
         </p>
-        <div className='relative mt-6 flex gap-4 animate-fade-up animate-delay-700'>
+        <div className='relative mt-6 flex gap-4 animate-fade-up animate-delay-700 max-sm:flex-col max-sm:gap-2'>
           <span className='absolute left-1/2 top-1/2 z-0 h-[50px] w-[100px] -translate-x-1/2 -translate-y-1/2 bg-primary/70 blur-[90px]' />
           <Link href='/' className='z-10'>
             <Button size='lg'>
