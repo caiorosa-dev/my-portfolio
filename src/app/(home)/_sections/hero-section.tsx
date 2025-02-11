@@ -8,7 +8,7 @@ import { Container } from '@/components/layout/container';
 
 export function HeroSection() {
   return (
-    <section className='relative flex h-full min-h-screen items-center'>
+    <section className='relative flex h-full min-h-screen items-center max-sm:px-6'>
       <Container className='flex flex-col items-center justify-center gap-6'>
         <div className='flex items-center gap-2 rounded-full border border-border/70 bg-background/10 max-sm:p-1 max-sm:px-4 p-2 px-8 backdrop-blur-sm animate-fade-up animate-delay-100'>
           <Image src='https://avatars.githubusercontent.com/caiorosa-dev' alt='Caio Rosa' width={28} height={28} className='rounded-full' />
