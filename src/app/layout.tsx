@@ -34,8 +34,8 @@ export default async function RootLayout({
         <ThemeProvider currentTheme={theme as Theme}>
           <Header />
           <div className="pointer-events-none fixed inset-0 z-0">
-            <div className="absolute right-0 top-0 size-[500px] animate-fade animate-delay-500 bg-blue-500/10 blur-[100px]" />
-            <div className="absolute bottom-0 left-0 size-[550px] animate-fade animate-delay-300 bg-purple-500/10 blur-[100px]" />
+            <div className="absolute right-0 top-0 size-[400px] dark:size-[500px] animate-fade animate-delay-500 bg-blue-500/10 blur-[100px]" />
+            <div className="absolute bottom-0 left-0 size-[400px] dark:size-[550px] animate-fade animate-delay-300 bg-purple-500/10 blur-[100px]" />
           </div>
           {children}
           <Footer />
