@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export function TechnologiesSection() {
   return (
-    <section className='my-48 max-sm:px-6'>
+    <section className='my-48 px-4'>
       <Container className='space-y-8'>
         <Title size='sm'>
           <GradientText>

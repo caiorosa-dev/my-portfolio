@@ -6,6 +6,8 @@ import { Header } from '@/components/layout/header';
 import { ThemeProvider } from '@/components/theme-provider';
 import { getTheme } from '@/actions/get-theme';
 import { Theme } from '@/types/theme';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -27,19 +29,24 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const { theme } = await getTheme();
+  const locale = await getLocale();
+
+  const messages = await getMessages();
 
   return (
-    <html lang="en" className={theme}>
+    <html lang={locale} className={theme}>
       <body className={`${dmSans.variable} antialiased`}>
-        <ThemeProvider currentTheme={theme as Theme}>
-          <Header />
-          <div className="pointer-events-none fixed inset-0 z-0">
-            <div className="absolute right-0 top-0 size-[400px] dark:size-[500px] animate-fade animate-delay-500 bg-blue-500/10 blur-[100px]" />
-            <div className="absolute bottom-0 left-0 size-[400px] dark:size-[550px] animate-fade animate-delay-300 bg-purple-500/10 blur-[100px]" />
-          </div>
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider currentTheme={theme as Theme}>
+            <Header />
+            <div className="pointer-events-none fixed inset-0 z-0">
+              <div className="absolute right-0 top-0 size-[400px] dark:size-[500px] animate-fade animate-delay-500 bg-blue-500/10 blur-[100px]" />
+              <div className="absolute bottom-0 left-0 size-[400px] dark:size-[550px] animate-fade animate-delay-300 bg-purple-500/10 blur-[100px]" />
+            </div>
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

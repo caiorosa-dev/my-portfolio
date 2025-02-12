@@ -1,9 +1,10 @@
-import { Github, Globe, Linkedin, Menu, MoonIcon } from 'lucide-react';
+import { Github, Linkedin, Menu } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import { Separator } from '../ui/separator';
 import { ThemeSwitcher } from '../theme-provider';
+import { LocaleSwitcher } from '../locale-switcher';
 
 export function Header() {
   return (
@@ -32,10 +33,7 @@ export function Header() {
           </a>
           <Separator orientation='vertical' className='h-6' />
           <ThemeSwitcher />
-          <Button variant='ghost'>
-            <Globe className='size-6' />
-            English
-          </Button>
+          <LocaleSwitcher />
         </nav>
         <Button variant='outline' size='icon' className='sm:hidden'>
           <Menu className='size-6' />

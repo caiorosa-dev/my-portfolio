@@ -12,7 +12,7 @@ import Link from 'next/link';
 
 export function ProjectsSection() {
   return (
-    <section className='my-48 max-sm:px-6'>
+    <section className='my-48 px-4'>
       <Container className='space-y-8'>
         <Title size='sm'>
           <GradientText>
