@@ -1,6 +1,23 @@
 {
   "Header": {
-    "home": "Home",
+    "home": "Início",
     "projects": "Projetos"
+  },
+  "HeroSection": {
+    "titleLineUp": "Desenvolvedor Full Stack",
+    "titleLineDown": "Que Cria Soluções Únicas",
+    "description": "Com mais de 4 anos de experiência, eu sou especialista em construir softwares inovadores usando tecnologias modernas como ReactJS, NextJS e NodeJS.",
+    "getResume": "Ver meu currículo",
+    "viewProjects": "Ver meus projetos"
+  },
+  "TechnologiesSection": {
+    "title": "Tecnologias que uso para construir meus projetos"
+  },
+  "ProjectsSection": {
+    "title": "Meus projetos mais recentes",
+    "viewMore": "Ver Mais"
+  },
+  "Footer": {
+    "paragraph": "Feito com ❤️ usando Next.js."
   }
 }

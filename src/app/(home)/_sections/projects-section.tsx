@@ -6,17 +6,22 @@ import { GradientHoverCard } from '@/components/ui/gradient-hover-card';
 import { Title } from '@/components/ui/title';
 import { PROJECTS } from '@/data/projects';
 import { cn } from '@/lib/utils';
+import { Language } from '@/types/language';
 import { ArrowRight, Github, Globe, SquareArrowOutUpRight } from 'lucide-react';
+import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export function ProjectsSection() {
+export async function ProjectsSection() {
+  const locale = await getLocale();
+  const t = await getTranslations('ProjectsSection');
+
   return (
     <section className='my-48 px-4'>
       <Container className='space-y-8'>
         <Title size='sm'>
           <GradientText>
-            My latest projects
+            {t('title')}
           </GradientText>
         </Title>
         <div className='grid grid-cols-2 gap-8 max-sm:grid-cols-1'>
@@ -41,7 +46,7 @@ export function ProjectsSection() {
                     ))}
                   </div>
                 </header>
-                <p className='text-muted-foreground max-sm:text-sm'>{project.description}</p>
+                <p className='text-muted-foreground max-sm:text-sm'>{project.description[locale as Language]}</p>
               </section>
               <footer className='flex justify-between items-center max-sm:flex-col max-sm:gap-2 max-sm:items-start'>
                 <ul className='flex gap-2'>
@@ -68,7 +73,7 @@ export function ProjectsSection() {
                   )}
                   <Link href={`/projects/${project.id}`} target='_blank' className='max-sm:w-full'>
                     <Button className='max-sm:w-full'>
-                      View More <ArrowRight className='w-4 h-4' />
+                      {t('viewMore')} <ArrowRight className='w-4 h-4' />
                     </Button>
                   </Link>
                 </nav>

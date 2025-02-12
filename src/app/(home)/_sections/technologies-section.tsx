@@ -5,14 +5,17 @@ import { Title } from '@/components/ui/title';
 import { TECHNOLOGIES_DATA } from '@/data/technologies';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
-export function TechnologiesSection() {
+export async function TechnologiesSection() {
+  const t = await getTranslations('TechnologiesSection');
+
   return (
     <section className='my-48 px-4'>
       <Container className='space-y-8'>
         <Title size='sm'>
           <GradientText>
-            Technologies I use to build my projects
+            {t('title')}
           </GradientText>
         </Title>
         <div className='space-y-8'>

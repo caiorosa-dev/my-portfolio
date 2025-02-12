@@ -1,9 +1,10 @@
+import { Language } from '@/types/language';
 import { TECHNOLOGIES_LIST, Technology } from './technologies';
 
 type Project = {
   id: string;
   title: string;
-  description: string;
+  description: Record<Language, string>;
   image: string;
   tags: string[];
   technologies: Technology[];
@@ -15,7 +16,10 @@ export const PROJECTS: Project[] = [
   {
     id: 'my-portfolio',
     title: 'My Portfolio',
-    description: 'This portfolio website showcases my journey as a developer, highlighting my skills and projects. Built with Next.js and styled using TailwindCSS, it offers a seamless and responsive user experience.',
+    description: {
+      en: 'This portfolio website showcases my journey as a developer, highlighting my skills and projects. Built with Next.js and styled using TailwindCSS, it offers a seamless and responsive user experience.',
+      pt: 'Este site apresenta minha jornada como desenvolvedor, destacando minhas habilidades e projetos. Construído com Next.js e estilizado usando TailwindCSS, oferece uma experiência de usuário suave e responsiva.',
+    },
     image: '/projects/portfolio.png',
     tags: ['Front-end'],
     technologies: [
@@ -29,7 +33,10 @@ export const PROJECTS: Project[] = [
   {
     id: 'stay-aiware',
     title: 'Stay AIware',
-    description: 'Stay AIware is a news aggregator that allows you to stay up to date with the latest AI news and trends. Built with Next.js, TailwindCSS, Prisma, and PostgreSQL.',
+    description: {
+      en: 'Stay AIware is a news aggregator that allows you to stay up to date with the latest AI news and trends. Built with Next.js, TailwindCSS, Prisma, and PostgreSQL.',
+      pt: 'Stay AIware é um agregador de notícias que permite você a ficar atualizado com as últimas notícias e tendências da IA. Construído com Next.js, TailwindCSS, Prisma e PostgreSQL.',
+    },
     image: '/projects/stayaiware.png',
     tags: ['Full-stack', 'Database', 'AI'],
     technologies: [
@@ -44,7 +51,10 @@ export const PROJECTS: Project[] = [
   {
     id: 'stylo',
     title: 'Stylo',
-    description: 'Stylo is an innovative SaaS that integrates AI with WhatsApp to automate scheduling and sync calendars, providing an intuitive user experience.',
+    description: {
+      en: 'Stylo is an innovative SaaS that integrates AI with WhatsApp to automate scheduling and sync calendars, providing an intuitive user experience.',
+      pt: 'Stylo é um SaaS inovador que integra IA com WhatsApp para automatizar agendamentos e sincronizar calendários de barbearias, oferecendo uma experiência de usuário intuitiva.',
+    },
     image: '/projects/stylo.png',
     tags: ['Full-stack', 'Database', 'AI', 'WhatsApp'],
     technologies: [

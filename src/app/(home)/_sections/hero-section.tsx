@@ -5,8 +5,11 @@ import { GradientText } from '@/components/misc/gradient-text';
 import { SquareArrowOutUpRightIcon } from 'lucide-react';
 import { Title } from '@/components/ui/title';
 import { Container } from '@/components/layout/container';
+import { getTranslations } from 'next-intl/server';
 
-export function HeroSection() {
+export async function HeroSection() {
+  const t = await getTranslations('HeroSection');
+
   return (
     <section className='relative flex h-full items-center px-4 my-60'>
       <Container className='flex flex-col items-center justify-center gap-6'>
@@ -15,23 +18,23 @@ export function HeroSection() {
           <span className='text-lg font-medium text-primary max-sm:text-base'>Caio Rosa</span>
         </div>
         <Title className='animate-fade-up animate-delay-300'>
-          <GradientText>Full Stack Developer</GradientText>
+          <GradientText>{t('titleLineUp')}</GradientText>
           <br />
-          <GradientText>Crafting Efficient Solutions</GradientText>
+          <GradientText>{t('titleLineDown')}</GradientText>
         </Title>
         <p className='mx-auto max-w-2xl text-center text-lg text-muted-foreground sm:text-xl animate-fade-up animate-delay-500'>
-          With over 4 years of experience, I specialize in building innovative solutions using modern technologies such as ReactJS, NextJS, and NodeJS.
+          {t('description')}
         </p>
         <div className='relative mt-6 flex gap-4 animate-fade-up animate-delay-700 max-sm:flex-col max-sm:gap-2'>
           <span className='absolute left-1/2 top-1/2 z-0 h-[50px] w-[100px] -translate-x-1/2 -translate-y-1/2 bg-primary/70 blur-[90px]' />
           <Link href='/' className='z-10'>
             <Button size='lg'>
-              Get My Resume
+              {t('getResume')}
               <SquareArrowOutUpRightIcon className='size-4' />
             </Button>
           </Link>
           <Button variant='outline' size='lg' className='z-10'>
-            <Link href='/'>View my projects</Link>
+            <Link href='/projects'>{t('viewProjects')}</Link>
           </Button>
         </div>
       </Container>
