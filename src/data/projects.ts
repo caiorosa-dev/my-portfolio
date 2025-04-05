@@ -65,7 +65,58 @@ export const PROJECTS: Project[] = [
       TECHNOLOGIES_LIST.backend[2],
       TECHNOLOGIES_LIST.backend[4],
     ],
-    visitUrl: 'https://styloapp.com.br',
-  }
+  },
+  {
+    id: 'mf-boost',
+    title: 'MF Boost',
+    description: {
+      en: 'A full-featured e-commerce platform built with Next.js and Adonis.js, offering a seamless shopping experience with advanced features like real-time inventory management and secure payment processing.',
+      pt: 'Uma plataforma de e-commerce completa construída com Next.js e Adonis.js, oferecendo uma experiência de compra perfeita com recursos avançados como gerenciamento de estoque em tempo real e processamento seguro de pagamentos.',
+    },
+    image: '/projects/mfboost.png',
+    tags: ['Full-stack', 'E-commerce', 'Database', 'Design'],
+    technologies: [
+      TECHNOLOGIES_LIST.frontend[0], // React.js
+      TECHNOLOGIES_LIST.frontend[1], // Next.js
+      TECHNOLOGIES_LIST.frontend[3], // TailwindCSS
+      TECHNOLOGIES_LIST.backend[1],  // AdonisJS
+      TECHNOLOGIES_LIST.backend[0],  // Node.js
+      TECHNOLOGIES_LIST.backend[4],  // PostgreSQL
+      TECHNOLOGIES_LIST.tools[1],    // Typescript
+      TECHNOLOGIES_LIST.tools[4],    // Figma
+    ],
+    visitUrl: 'https://mfboost.com',
+  },
+  {
+    id: 'other-bowling-bar',
+    title: 'Other Bowling Bar',
+    description: {
+      en: 'A modern landing page for a bowling bar, featuring an engaging design and smooth animations. Built with Next.js and TailwindCSS to showcase the venue\'s atmosphere and services.',
+      pt: 'Uma landing page moderna para um bar de boliche, apresentando um design envolvente e animações suaves. Construída com Next.js e TailwindCSS para destacar a atmosfera e serviços do local.',
+    },
+    image: '/projects/otherbowlingbar.png',
+    tags: ['Front-end', 'Landing Page', 'Design'],
+    technologies: [
+      TECHNOLOGIES_LIST.frontend[1],
+      TECHNOLOGIES_LIST.frontend[3],
+      TECHNOLOGIES_LIST.tools[4],    // Figma
+    ],
+    visitUrl: 'https://otherbowlingbar.com',
+  },
+  {
+    id: 'echoo-solutions',
+    title: 'Echoo Solutions',
+    description: {
+      en: 'A professional landing page for Echoo Solutions, showcasing their services and expertise. Built with Next.js and modern design principles to create an impactful online presence.',
+      pt: 'Uma landing page profissional para a Echoo Solutions, destacando seus serviços e expertise. Construída com Next.js e princípios modernos de design para criar uma presença online impactante.',
+    },
+    image: '/projects/echoo.png',
+    tags: ['Front-end', 'Landing Page'],
+    technologies: [
+      TECHNOLOGIES_LIST.frontend[1],
+      TECHNOLOGIES_LIST.frontend[3],
+    ],
+    visitUrl: 'https://echoo.solutions',
+  },
 ]
 
