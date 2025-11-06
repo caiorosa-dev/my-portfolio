@@ -1,5 +1,6 @@
 import { Container } from '@/components/layout/container';
 import { GradientText } from '@/components/misc/gradient-text';
+import { ProjectStatusBadge } from '@/components/project-status-badge';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { GradientHoverCard } from '@/components/ui/gradient-hover-card';
@@ -39,6 +40,9 @@ export async function ProjectsSection() {
                         </Button>
                       </a>
                     )}
+                    {project.status !== 'active' && (
+                      <ProjectStatusBadge status={project.status} />
+                    )}
                   </div>
                   <div className='flex gap-2 max-sm:gap-1'>
                     {project.tags.map((tag) => (
@@ -71,11 +75,11 @@ export async function ProjectsSection() {
                       </Button>
                     </a>
                   )}
-                  <Link href={`/projects/${project.id}`} target='_blank' className='max-sm:w-full'>
+                  {/* <Link href={`/projects/${project.id}`} target='_blank' className='max-sm:w-full'>
                     <Button className='max-sm:w-full'>
                       {t('viewMore')} <ArrowRight className='w-4 h-4' />
                     </Button>
-                  </Link>
+                  </Link> */}
                 </nav>
               </footer>
             </GradientHoverCard>

@@ -1,7 +1,9 @@
 import { Language } from '@/types/language';
 import { TECHNOLOGIES_LIST, Technology } from './technologies';
 
-type Project = {
+export type ProjectStatus = 'active' | 'in_progress' | 'archived';
+
+export type Project = {
   id: string;
   title: string;
   description: Record<Language, string>;
@@ -10,6 +12,7 @@ type Project = {
   technologies: Technology[];
   visitUrl?: string;
   githubUrl?: string;
+  status: ProjectStatus;
 }
 
 export const PROJECTS: Project[] = [
@@ -29,6 +32,7 @@ export const PROJECTS: Project[] = [
     ],
     visitUrl: 'https://caiorosadev.com',
     githubUrl: 'https://github.com/caiorosa-dev/my-portfolio',
+    status: 'active',
   },
   {
     id: 'stay-aiware',
@@ -47,6 +51,7 @@ export const PROJECTS: Project[] = [
       TECHNOLOGIES_LIST.backend[4],
     ],
     visitUrl: 'https://stayaiware.com',
+    status: 'in_progress',
   },
   {
     id: 'stylo',
@@ -65,6 +70,7 @@ export const PROJECTS: Project[] = [
       TECHNOLOGIES_LIST.backend[2],
       TECHNOLOGIES_LIST.backend[4],
     ],
+    status: 'archived',
   },
   {
     id: 'mf-boost',
@@ -85,7 +91,7 @@ export const PROJECTS: Project[] = [
       TECHNOLOGIES_LIST.tools[1],    // Typescript
       TECHNOLOGIES_LIST.tools[4],    // Figma
     ],
-    visitUrl: 'https://mfboost.com',
+    status: 'active',
   },
   {
     id: 'other-bowling-bar',
@@ -102,6 +108,7 @@ export const PROJECTS: Project[] = [
       TECHNOLOGIES_LIST.tools[4],    // Figma
     ],
     visitUrl: 'https://otherbowlingbar.com',
+    status: 'archived',
   },
   {
     id: 'echoo-solutions',
@@ -116,7 +123,7 @@ export const PROJECTS: Project[] = [
       TECHNOLOGIES_LIST.frontend[1],
       TECHNOLOGIES_LIST.frontend[3],
     ],
-    visitUrl: 'https://echoo.solutions',
-  },
+    status: 'archived',
+  }
 ]
 

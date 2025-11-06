@@ -54,6 +54,17 @@ export const TECHNOLOGIES_LIST: Record<string, Technology[]> = {
       icon: '/logos/prisma-icon.svg',
       color: '#a7a7a7',
       invertIconColor: true,
+    },
+    {
+      label: 'Redis',
+      icon: '/logos/redis-icon.svg',
+      color: '#DC382D',
+    },
+    {
+      label: 'Fastify',
+      icon: '/logos/fastify-icon.svg',
+      color: '#a7a7a7',
+      invertIconColor: true,
     }
   ],
   frontend: [
@@ -97,6 +108,22 @@ export const TECHNOLOGIES_LIST: Record<string, Technology[]> = {
       label: 'Javascript',
       icon: '/logos/javascript-icon.svg',
       color: '#f0db4f',
+    },
+    {
+      label: 'Framer Motion',
+      icon: '/logos/motion-icon.png',
+      color: '#fff42b',
+      invertIconColor: true,
+    },
+    {
+      label: 'Zustand',
+      icon: '/logos/zustand-icon.png',
+      color: '#443E38',
+    },
+    {
+      label: 'React Query',
+      icon: '/logos/react-query-icon.svg',
+      color: '#FF4154',
     }
   ],
   tools: [
@@ -128,6 +155,12 @@ export const TECHNOLOGIES_LIST: Record<string, Technology[]> = {
     {
       label: 'Vercel',
       icon: '/logos/vercel-icon.svg',
+      color: '#a7a7a7',
+      invertIconColor: true,
+    },
+    {
+      label: 'OpenAI API',
+      icon: '/logos/open-ai-icon.svg',
       color: '#a7a7a7',
       invertIconColor: true,
     },
