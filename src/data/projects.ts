@@ -17,6 +17,50 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
+    id: 'cinestartup',
+    title: 'Cinestartup',
+    description: {
+      en: 'An innovative EdTech platform dedicated to audiovisual education, empowering students to learn content creation through interactive courses and AI-powered tools. Built with a modern tech stack to deliver seamless learning experiences and real-time content generation.',
+      pt: 'Uma plataforma EdTech inovadora dedicada à educação audiovisual, capacitando estudantes a aprender criação de conteúdo através de cursos interativos e ferramentas com IA. Construída com uma stack tecnológica moderna para entregar experiências de aprendizado fluidas e geração de conteúdo em tempo real.',
+    },
+    image: '/projects/cinestartup.png',
+    tags: ['Full-stack', 'EdTech', 'AI', 'Database'],
+    technologies: [
+      TECHNOLOGIES_LIST.frontend[0],  // React.js
+      TECHNOLOGIES_LIST.frontend[1],  // Next.js
+      TECHNOLOGIES_LIST.frontend[3],  // TailwindCSS
+      TECHNOLOGIES_LIST.frontend[10], // React Query
+      TECHNOLOGIES_LIST.backend[0],   // Node.js
+      TECHNOLOGIES_LIST.backend[2],   // NestJS
+      TECHNOLOGIES_LIST.backend[4],   // PostgreSQL
+      TECHNOLOGIES_LIST.backend[7],   // Prisma.js
+      TECHNOLOGIES_LIST.backend[8],   // Redis
+      TECHNOLOGIES_LIST.tools[1],     // Typescript
+      TECHNOLOGIES_LIST.tools[6],     // OpenAI API
+    ],
+    status: 'active',
+  },
+  {
+    id: 'unk-dev',
+    title: 'Unk.dev',
+    description: {
+      en: 'A comprehensive software development agency platform offering end-to-end solutions. From ongoing support to sprint-driven execution, it provides dedicated development services tailored to client needs with modern technologies and best practices.',
+      pt: 'Uma plataforma completa de agência de desenvolvimento de software oferecendo soluções end-to-end. Do suporte contínuo à execução orientada por sprints, fornece serviços de desenvolvimento dedicados adaptados às necessidades dos clientes com tecnologias modernas e melhores práticas.',
+    },
+    image: '/projects/unkdev.png',
+    tags: ['Front-end', 'Landing page'],
+    technologies: [
+      TECHNOLOGIES_LIST.frontend[1],  // Next.js
+      TECHNOLOGIES_LIST.frontend[3],  // TailwindCSS
+      TECHNOLOGIES_LIST.backend[0],   // Node.js
+      TECHNOLOGIES_LIST.backend[4],   // PostgreSQL
+      TECHNOLOGIES_LIST.tools[1],     // Typescript
+      TECHNOLOGIES_LIST.tools[0],     // Docker
+    ],
+    status: 'active',
+    visitUrl: 'https://unkdev.co'
+  },
+  {
     id: 'my-portfolio',
     title: 'My Portfolio',
     description: {
@@ -33,6 +77,30 @@ export const PROJECTS: Project[] = [
     visitUrl: 'https://caiorosadev.com',
     githubUrl: 'https://github.com/caiorosa-dev/my-portfolio',
     status: 'active',
+  },
+  {
+    id: 'indier',
+    title: 'Indier',
+    description: {
+      en: 'A comprehensive SaaS platform designed to empower developers and indie hackers with a powerful suite of tools for rapid project development. Features AI-powered assistance, authentication, and real-time collaboration to transform ideas into production-ready applications.',
+      pt: 'Uma plataforma SaaS abrangente projetada para capacitar desenvolvedores e indie hackers com um poderoso conjunto de ferramentas para desenvolvimento rápido de projetos. Apresenta assistência com IA, autenticação e colaboração em tempo real para transformar ideias em aplicações prontas para produção.',
+    },
+    image: '/projects/indier.png',
+    tags: ['Full-stack', 'SaaS', 'AI', 'Database'],
+    technologies: [
+      TECHNOLOGIES_LIST.frontend[0],  // React.js
+      TECHNOLOGIES_LIST.frontend[1],  // Next.js
+      TECHNOLOGIES_LIST.frontend[3],  // TailwindCSS
+      TECHNOLOGIES_LIST.frontend[8],  // Framer Motion
+      TECHNOLOGIES_LIST.backend[0],   // Node.js
+      TECHNOLOGIES_LIST.backend[4],   // PostgreSQL
+      TECHNOLOGIES_LIST.backend[7],   // Prisma.js
+      TECHNOLOGIES_LIST.backend[8],   // Redis
+      TECHNOLOGIES_LIST.tools[1],     // Typescript
+      TECHNOLOGIES_LIST.tools[0],     // Docker
+      TECHNOLOGIES_LIST.tools[6],     // OpenAI API
+    ],
+    status: 'archived',
   },
   {
     id: 'stay-aiware',
@@ -108,7 +176,7 @@ export const PROJECTS: Project[] = [
       TECHNOLOGIES_LIST.tools[4],    // Figma
     ],
     visitUrl: 'https://otherbowlingbar.com',
-    status: 'archived',
+    status: 'active',
   },
   {
     id: 'echoo-solutions',
