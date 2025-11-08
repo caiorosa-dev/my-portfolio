@@ -164,7 +164,7 @@ export const PROJECTS: Project[] = [
       pt: 'Uma plataforma de e-commerce completa construída com Next.js e Adonis.js, oferecendo uma experiência de compra perfeita com recursos avançados como gerenciamento de estoque em tempo real e processamento seguro de pagamentos.',
     },
     image: '/projects/e-commerce-platform.png',
-    tags: ['Full-stack', 'E-commerce', 'Database', 'Design'],
+    tags: ['Full-stack', 'Database', 'Design'],
     technologies: [
       TECHNOLOGIES_LIST.frontend[0], // React.js
       TECHNOLOGIES_LIST.frontend[1], // Next.js
