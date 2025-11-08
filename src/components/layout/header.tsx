@@ -1,5 +1,4 @@
 import { Github, Linkedin, Menu } from 'lucide-react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import { Separator } from '../ui/separator';
@@ -18,10 +17,10 @@ export async function Header() {
             <Image src='/logo-icon.png' alt='CR' width={36} height={36} />
             <p className='text-xl font-bold text-primary'>dev</p>
           </div>
-          <nav className='flex gap-3 max-sm:hidden'>
+          {/* <nav className='flex gap-3 max-sm:hidden'>
             <Link href='/' className='font-semibold text-primary transition-all hover:text-primary/80'>{t('home')}</Link>
             <Link href='/projects' className='font-semibold text-primary transition-all hover:text-primary/80'>{t('projects')}</Link>
-          </nav>
+          </nav> */}
         </div>
         <nav className='flex items-center gap-2 max-sm:hidden'>
           <a href='https://github.com/caiorosa-dev' target='_blank' rel='noopener noreferrer'>
