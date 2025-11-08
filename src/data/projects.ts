@@ -38,6 +38,7 @@ export const PROJECTS: Project[] = [
       TECHNOLOGIES_LIST.tools[1],     // Typescript
       TECHNOLOGIES_LIST.tools[6],     // OpenAI API
     ],
+    visitUrl: 'https://cinestartup.com',
     status: 'active',
   },
   {
@@ -141,13 +142,28 @@ export const PROJECTS: Project[] = [
     status: 'archived',
   },
   {
-    id: 'mf-boost',
-    title: 'MF Boost',
+    id: 'echoo-solutions',
+    title: 'Echoo Solutions',
+    description: {
+      en: 'A professional landing page for Echoo Solutions, showcasing their services and expertise. Built with Next.js and modern design principles to create an impactful online presence.',
+      pt: 'Uma landing page profissional para a Echoo Solutions, destacando seus serviços e expertise. Construída com Next.js e princípios modernos de design para criar uma presença online impactante.',
+    },
+    image: '/projects/echoo.png',
+    tags: ['Front-end', 'Landing Page'],
+    technologies: [
+      TECHNOLOGIES_LIST.frontend[1],
+      TECHNOLOGIES_LIST.frontend[3],
+    ],
+    status: 'archived',
+  },
+  {
+    id: 'games-e-commerce',
+    title: 'Games E-Commerce platform',
     description: {
       en: 'A full-featured e-commerce platform built with Next.js and Adonis.js, offering a seamless shopping experience with advanced features like real-time inventory management and secure payment processing.',
       pt: 'Uma plataforma de e-commerce completa construída com Next.js e Adonis.js, oferecendo uma experiência de compra perfeita com recursos avançados como gerenciamento de estoque em tempo real e processamento seguro de pagamentos.',
     },
-    image: '/projects/mfboost.png',
+    image: '/projects/e-commerce-platform.png',
     tags: ['Full-stack', 'E-commerce', 'Database', 'Design'],
     technologies: [
       TECHNOLOGIES_LIST.frontend[0], // React.js
@@ -178,20 +194,5 @@ export const PROJECTS: Project[] = [
     visitUrl: 'https://otherbowlingbar.com',
     status: 'active',
   },
-  {
-    id: 'echoo-solutions',
-    title: 'Echoo Solutions',
-    description: {
-      en: 'A professional landing page for Echoo Solutions, showcasing their services and expertise. Built with Next.js and modern design principles to create an impactful online presence.',
-      pt: 'Uma landing page profissional para a Echoo Solutions, destacando seus serviços e expertise. Construída com Next.js e princípios modernos de design para criar uma presença online impactante.',
-    },
-    image: '/projects/echoo.png',
-    tags: ['Front-end', 'Landing Page'],
-    technologies: [
-      TECHNOLOGIES_LIST.frontend[1],
-      TECHNOLOGIES_LIST.frontend[3],
-    ],
-    status: 'archived',
-  }
 ]
 
