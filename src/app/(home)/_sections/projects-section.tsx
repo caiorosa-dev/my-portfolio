@@ -18,7 +18,7 @@ export async function ProjectsSection() {
   const t = await getTranslations('ProjectsSection');
 
   return (
-    <section className='my-48 px-4'>
+    <section className='my-48 px-4' id='projects'>
       <Container className='space-y-8'>
         <Title size='sm'>
           <GradientText>

@@ -27,14 +27,14 @@ export async function HeroSection() {
         </p>
         <div className='relative mt-6 flex gap-4 animate-fade-up animate-delay-700 max-sm:flex-col max-sm:gap-2'>
           <span className='absolute left-1/2 top-1/2 z-0 h-[50px] w-[100px] -translate-x-1/2 -translate-y-1/2 bg-primary/70 blur-[90px]' />
-          <Link href='/' className='z-10'>
+          <a href='https://drive.google.com/file/d/1ZuEF1avO57cM-DFF5u_cF4d8-Uxyuy93/view?usp=sharing' target='_blank' rel='noopener noreferrer' className='z-10'>
             <Button size='lg'>
               {t('getResume')}
               <SquareArrowOutUpRightIcon className='size-4' />
             </Button>
-          </Link>
+          </a>
           <Button variant='outline' size='lg' className='z-10'>
-            <Link href='/projects'>{t('viewProjects')}</Link>
+            <Link href='#projects'>{t('viewProjects')}</Link>
           </Button>
         </div>
       </Container>
